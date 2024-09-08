@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+h1 {
+    text-decoration-color: white;
+    background-color: #dddddd;
+}
+
+.calculator {
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+#inputPanel, #outputPanel {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-align: right;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+#outputPanel {
+    font-weight: bold;
+    color: #4CAF50; /* Green color for result */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+button {
+    padding: 20px;
+    font-size: 1.25rem;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    transition: transform 0.1s ease;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Number Buttons */
+button.number {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+button.number:hover {
+    background-color: #e0e0e0;
+}
+
+/* Operator Buttons (+, -, *, /) */
+button.operator {
+    background-color: #ffa500;
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #ff8c00;
+}
+
+/* Equals Button */
+button.equals {
+    background-color: blue;
+    color: white;
+}
+
+button.equals:hover {
+    background-color: #45a049;
+}
+
+
+/* Clear Button (AC) */
+button.clear {
+    background-color: #ff4c4c;
+    color: white;
+}
+
+button.clear:hover {
+    background-color: #ff3333;
+}
+
+button.delete{
+    background-color: darkred;
+    color: white;
+}
+button.delete:hover {
+    background-color: #ff3333;
+}
+
+
+
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    /* On tablets, shrink the buttons */
+    button {
+        font-size: 1rem;
+        padding: 12px;
+        height: 50px;
+    }
+
+    #inputPanel, #outputPanel {
+        font-size: 1.25rem;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* On small mobile screens, adjust the layout */
+    .calculator {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #inputPanel, #outputPanel {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+        height: 45px;
+    }
+
+    .button-grid {
+        gap: 5px; /* Smaller gaps on mobile */
+    }
+}

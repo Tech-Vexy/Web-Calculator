@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.0/math.min.js"></script>
+
+</head>
+<body>
+    <div class="calculator">
+        <h1>Simple Calculator</h1>
+        <input type="text" id="inputPanel" readonly placeholder="0"> <!-- Expression Input Panel -->
+        <input type="text" id="outputPanel" readonly placeholder="Answer"> <!-- Result Output Panel -->
+        <div class="button-grid">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button  class="delete" onclick="deleteCharacter()">DEL</button>
+            <button class="operator" onclick="appendOperator('%')">%</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+            <button class="number" onclick="appendDigit('7')">7</button>
+            <button class="number" onclick="appendDigit('8')">8</button>
+            <button class="number" onclick="appendDigit('9')">9</button>
+            <button class="operator" onclick="appendOperator('*')">*</button>
+            <button class="number" onclick="appendDigit('4')">4</button>
+            <button class="number" onclick="appendDigit('5')">5</button>
+            <button class="number" onclick="appendDigit('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+            <button class="number" onclick="appendDigit('1')">1</button>
+            <button class="number" onclick="appendDigit('2')">2</button>
+            <button class="number" onclick="appendDigit('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+            <button class="number" onclick="appendDigit('.')">.</button>
+            <button class="number" onclick="appendDigit('0')">0</button>
+            <button class="operator" onclick="calculateFactorial()">!</button>
+            <button class="equals"  onclick="calculate()">=</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
